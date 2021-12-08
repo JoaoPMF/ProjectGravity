@@ -7,8 +7,15 @@ public class Pickup : MonoBehaviour
     public float pickUpRange = 5f;
     public float moveForce = 250f;
     public Transform holdParent;
-
+    public GameObject crosshairGameObj;
+    
     GameObject heldObj;
+    Crosshair crosshair;
+
+    void Start()
+    {
+        crosshair = crosshairGameObj.GetComponent<Crosshair>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -54,6 +61,8 @@ public class Pickup : MonoBehaviour
 
             rb.transform.parent = holdParent;
             heldObj = pickUpObj;
+
+            crosshair.SetScale(CrosshairScale.Walk);
         }
     }
 
@@ -65,5 +74,7 @@ public class Pickup : MonoBehaviour
 
         rb.transform.parent = null;
         heldObj = null;
+
+        crosshair.SetScale(CrosshairScale.Default);
     }
 }
