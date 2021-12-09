@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     public float pickUpRange = 5f;
     public float moveForce = 250f;
+    public float rotationSpeed = 100f;
     public Transform holdParent;
     public GameObject crosshairGameObj;
     
@@ -35,6 +36,11 @@ public class Pickup : MonoBehaviour
                 DropObject();
             }
         }
+
+        if (Input.GetMouseButton(1) && heldObj != null)
+        {
+            RotateObject();
+        }
         
         if (heldObj != null) 
         {
@@ -56,11 +62,17 @@ public class Pickup : MonoBehaviour
         if (pickUpObj.GetComponent<Rigidbody>())
         {
             Rigidbody rb = pickUpObj.GetComponent<Rigidbody>();
+            rb.detectCollisions = false;
+            rb.freezeRotation = true;
             rb.useGravity = false;
             rb.drag = 10;
 
+            pickUpObj.GetComponent<BoundaryCheck>().lastPosition = pickUpObj.transform.position;
+
             rb.transform.parent = holdParent;
             heldObj = pickUpObj;
+
+            heldObj.transform.LookAt(transform.parent.transform);
 
             crosshair.SetScale(CrosshairScale.Walk);
         }
@@ -69,6 +81,8 @@ public class Pickup : MonoBehaviour
     void DropObject()
     {
         Rigidbody rb = heldObj.GetComponent<Rigidbody>();
+        rb.detectCollisions = true;
+        rb.freezeRotation = false;
         rb.useGravity = true;
         rb.drag = 1;
 
@@ -76,5 +90,10 @@ public class Pickup : MonoBehaviour
         heldObj = null;
 
         crosshair.SetScale(CrosshairScale.Default);
+    }
+
+    void RotateObject()
+    {
+        heldObj.transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
     }
 }
