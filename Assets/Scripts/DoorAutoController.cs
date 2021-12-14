@@ -12,14 +12,18 @@ public class DoorAutoController : MonoBehaviour
         doorAnimator = gameObject.GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider collider) {
-        if(collider.CompareTag("Player")){
+    private void OnTriggerEnter(Collider collider) 
+    {
+        if(collider.CompareTag("Player"))
+        {
             PlayAnimation();
         }
     }
 
-    private void OnTriggerExit(Collider collider) {
-        if(collider.CompareTag("Player")){
+    private void OnTriggerExit(Collider collider) 
+    {
+        if(collider.CompareTag("Player"))
+        {
             PlayAnimation();
         }
     }
