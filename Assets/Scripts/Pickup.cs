@@ -8,15 +8,8 @@ public class Pickup : MonoBehaviour
     public float moveForce = 250f;
     public float rotationSpeed = 100f;
     public Transform holdParent;
-    public GameObject crosshairGameObj;
     
     GameObject heldObj;
-    Crosshair crosshair;
-
-    void Start()
-    {
-        crosshair = crosshairGameObj.GetComponent<Crosshair>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -73,8 +66,6 @@ public class Pickup : MonoBehaviour
             heldObj = pickUpObj;
 
             heldObj.transform.LookAt(transform.parent.transform);
-
-            crosshair.SetScale(CrosshairScale.Walk);
         }
     }
 
@@ -88,8 +79,6 @@ public class Pickup : MonoBehaviour
 
         rb.transform.parent = null;
         heldObj = null;
-
-        crosshair.SetScale(CrosshairScale.Default);
     }
 
     void RotateObject()
