@@ -11,7 +11,7 @@ public class DoorRaycast : MonoBehaviour
     [SerializeField] private KeyCode openDoorKey = KeyCode.Mouse0;
     [SerializeField] private Image crosshair = null;
 
-    private DoorController raycastedObj;
+    private DoorController doorController;
     private bool isCrosshairActive;
     private bool doOnce;
 
@@ -30,8 +30,12 @@ public class DoorRaycast : MonoBehaviour
             {
                 if(!doOnce)
                 {
-                    raycastedObj = hit.collider.gameObject.transform.parent.gameObject.GetComponent<DoorController>();
-                    CrosshairChange(true);
+                    Transform doorParent = hit.collider.gameObject.transform.parent;
+                    if (doorParent != null)
+                    {
+                        doorController = doorParent.gameObject.GetComponent<DoorController>();
+                        CrosshairChange(true);
+                    }
                 }
 
                 isCrosshairActive = true;
@@ -39,7 +43,7 @@ public class DoorRaycast : MonoBehaviour
 
                 if(Input.GetKeyDown(openDoorKey))
                 {
-                    raycastedObj.PlayAnimation();
+                    doorController.PlayAnimation();
                 }
             }
         }
