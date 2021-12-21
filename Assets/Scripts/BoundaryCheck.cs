@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoundaryCheck : MonoBehaviour
 {
-    public float respawnY = 100f;
     public Vector3 lastPosition;
 
     // Start is called before the first frame update
