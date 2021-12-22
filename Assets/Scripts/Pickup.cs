@@ -55,7 +55,7 @@ public class Pickup : MonoBehaviour
         if (pickUpObj.GetComponent<Rigidbody>())
         {
             Rigidbody rb = pickUpObj.GetComponent<Rigidbody>();
-            rb.detectCollisions = false;
+            rb.isKinematic = true;
             rb.freezeRotation = true;
             rb.useGravity = false;
             rb.drag = 10;
@@ -72,7 +72,7 @@ public class Pickup : MonoBehaviour
     void DropObject()
     {
         Rigidbody rb = heldObj.GetComponent<Rigidbody>();
-        rb.detectCollisions = true;
+        rb.isKinematic = false;
         rb.freezeRotation = false;
         rb.useGravity = true;
         rb.drag = 1;
