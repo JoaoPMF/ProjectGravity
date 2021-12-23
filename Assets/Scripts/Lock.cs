@@ -7,4 +7,8 @@ public abstract class Lock : MonoBehaviour
     public bool locked = true;
 
     public abstract void Unlock();
+
+    public abstract void _Lock();
+
+    public abstract void Check(float value);
 }

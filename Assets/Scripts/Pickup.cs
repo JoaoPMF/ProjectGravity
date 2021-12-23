@@ -16,18 +16,23 @@ public class Pickup : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (heldObj == null) 
+            RaycastHit hit;
+            if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
             {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+                IInteractible interactible = hit.transform.gameObject.GetComponent<IInteractible>();
+                if (interactible != null)
+                {
+                    interactible.Interact();
+                } 
+                else if (heldObj == null) 
                 {
                     PickUpObject(hit.transform.gameObject);
                 }
+                else
+                {
+                    DropObject();
+                }
             } 
-            else
-            {
-                DropObject();
-            }
         }
 
         if (Input.GetMouseButton(1) && heldObj != null)

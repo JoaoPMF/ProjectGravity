@@ -13,6 +13,16 @@ public class LockKeyController : Lock
         renderer.material.SetColor("_EmissionColor", Color.green);
     }
 
+    public override void _Lock() 
+    {
+        //empty
+    }
+
+    public override void Check(float value) 
+    {
+        //empty
+    }
+
     private void OnTriggerEnter(Collider collider) 
     {
         if (locked)
