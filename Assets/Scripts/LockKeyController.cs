@@ -30,6 +30,7 @@ public class LockKeyController : Lock
             if (collider.gameObject == key)
             {
                 Unlock();
+                Destroy(key);
             }
         }
     }

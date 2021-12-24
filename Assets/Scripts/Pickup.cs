@@ -20,17 +20,17 @@ public class Pickup : MonoBehaviour
             if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
             {
                 IInteractible interactible = hit.transform.gameObject.GetComponent<IInteractible>();
-                if (interactible != null)
+                if (heldObj != null)
+                {
+                    DropObject();
+                } 
+                else if (interactible != null) 
                 {
                     interactible.Interact();
-                } 
-                else if (heldObj == null) 
-                {
-                    PickUpObject(hit.transform.gameObject);
                 }
                 else
                 {
-                    DropObject();
+                    PickUpObject(hit.transform.gameObject);
                 }
             } 
         }
@@ -60,7 +60,7 @@ public class Pickup : MonoBehaviour
         if (pickUpObj.GetComponent<Rigidbody>())
         {
             Rigidbody rb = pickUpObj.GetComponent<Rigidbody>();
-            rb.isKinematic = true;
+            rb.detectCollisions = false;
             rb.freezeRotation = true;
             rb.useGravity = false;
             rb.drag = 10;
@@ -77,7 +77,7 @@ public class Pickup : MonoBehaviour
     void DropObject()
     {
         Rigidbody rb = heldObj.GetComponent<Rigidbody>();
-        rb.isKinematic = false;
+        rb.detectCollisions = true;
         rb.freezeRotation = false;
         rb.useGravity = true;
         rb.drag = 1;
