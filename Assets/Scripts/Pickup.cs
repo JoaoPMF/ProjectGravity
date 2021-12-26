@@ -14,36 +14,42 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!PauseControl.gameIsPaused)
         {
-            RaycastHit hit;
-            if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+            if (Input.GetMouseButtonDown(0))
             {
-                IInteractible interactible = hit.transform.gameObject.GetComponent<IInteractible>();
                 if (heldObj != null)
                 {
                     DropObject();
                 } 
-                else if (interactible != null) 
-                {
-                    interactible.Interact();
-                }
                 else
                 {
-                    PickUpObject(hit.transform.gameObject);
+                    RaycastHit hit;
+                    if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+                    {
+                        IInteractible interactible = hit.transform.gameObject.GetComponent<IInteractible>();
+                        if (interactible != null) 
+                        {
+                            interactible.Interact();
+                        }
+                        else if(heldObj == null)
+                        {
+                            PickUpObject(hit.transform.gameObject);
+                        }
+                    } 
                 }
+            }
+
+            if (Input.GetMouseButton(1) && heldObj != null)
+            {
+                RotateObject();
+            }
+            
+            if (heldObj != null) 
+            {
+                MoveObject();
             } 
         }
-
-        if (Input.GetMouseButton(1) && heldObj != null)
-        {
-            RotateObject();
-        }
-        
-        if (heldObj != null) 
-        {
-            MoveObject();
-        } 
     }
 
     void MoveObject()
@@ -65,6 +71,10 @@ public class Pickup : MonoBehaviour
             rb.useGravity = false;
             rb.drag = 10;
 
+            Outline outline = pickUpObj.GetComponent<Outline>();
+            outline.enabled = true;
+            outline.OutlineMode = Outline.Mode.SilhouetteOnly;
+
             pickUpObj.GetComponent<BoundaryCheck>().lastPosition = pickUpObj.transform.position;
 
             rb.transform.parent = holdParent;
@@ -81,6 +91,8 @@ public class Pickup : MonoBehaviour
         rb.freezeRotation = false;
         rb.useGravity = true;
         rb.drag = 1;
+
+        heldObj.GetComponent<Outline>().enabled = false;
 
         rb.transform.parent = null;
         heldObj = null;

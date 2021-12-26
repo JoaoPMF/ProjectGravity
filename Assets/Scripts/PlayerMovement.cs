@@ -69,18 +69,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        MyInput();
-        ControlDrag();
-        ControlSpeed();
-
-        if (Input.GetKeyDown(jumpKey) && isGrounded)
+        if (!PauseControl.gameIsPaused)
         {
-            Jump();
-        }
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
+            MyInput();
+            ControlDrag();
+            ControlSpeed();
+
+            if (Input.GetKeyDown(jumpKey) && isGrounded)
+            {
+                Jump();
+            }
+
+            slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
+        }
     }
 
     void MyInput()
