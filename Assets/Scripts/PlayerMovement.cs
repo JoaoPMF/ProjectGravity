@@ -72,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
         if (!PauseControl.gameIsPaused)
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
             MyInput();
             ControlDrag();
             ControlSpeed();
