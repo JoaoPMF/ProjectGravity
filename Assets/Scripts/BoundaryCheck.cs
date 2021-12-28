@@ -12,15 +12,24 @@ public class BoundaryCheck : MonoBehaviour
         lastPosition = transform.position;
     }
 
+    void OnCollisionEnter(Collision collision)
+     {
+        Debug.Log("collided");
+        if (collision.gameObject.CompareTag("Ceiling"))
+        {
+            Debug.Log("on ceiling");
+            transform.position = lastPosition;
+        }
+     }
+
     // Update is called once per frame
     void Update()
     {
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        BoxCollider bc = gameObject.GetComponent<BoxCollider>();
 
-        if (transform.position.y < -2 && rb.detectCollisions == true)
+        if (transform.position.y < -5 && rb.detectCollisions == true)
         {
-            transform.position = lastPosition;
+            transform.position = new Vector3(lastPosition.x,lastPosition.y+0.5f,lastPosition.z);
         }
     }
 }
