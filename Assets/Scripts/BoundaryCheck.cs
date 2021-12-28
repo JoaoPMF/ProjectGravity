@@ -14,10 +14,8 @@ public class BoundaryCheck : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
      {
-        Debug.Log("collided");
         if (collision.gameObject.CompareTag("Ceiling"))
         {
-            Debug.Log("on ceiling");
             transform.position = lastPosition;
         }
      }

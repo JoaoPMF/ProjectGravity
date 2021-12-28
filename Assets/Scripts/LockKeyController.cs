@@ -10,7 +10,9 @@ public class LockKeyController : Lock
     {
         locked = false;
         var renderer = gameObject.GetComponent<Renderer>();
-        renderer.material.SetColor("_EmissionColor", Color.green);
+        Material green = renderer.materials[2];
+        green.SetColor("_EmissionColor", Color.green);
+        renderer.materials[2] = green;
     }
 
     public override void _Lock() 
