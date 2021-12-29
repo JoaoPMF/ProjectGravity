@@ -68,4 +68,9 @@ public class SequenceLockController : Lock
     public override void Check(float value, PodController controller){
 
     }
+
+    public override void Check(float value, KeyController controller)
+    {
+        
+    }
 }

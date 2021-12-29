@@ -29,6 +29,11 @@ public class WatertankLockController : Lock
 
     }
 
+    public override void Check(float value, KeyController controller)
+    {
+        
+    }
+
     public void Update(){
         if (locked)
         {

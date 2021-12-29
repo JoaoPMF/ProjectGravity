@@ -2,51 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SequenceLockControllerPods : Lock
+public class SequenceLockControllerScreen : Lock
 {
-    [SerializeField] private List<GameObject> pods;
+    [SerializeField] private List<GameObject> keys;
     [SerializeField] private float[] sequence;
 
-    private List<PodController> podControllers;
+    private List<KeyController> keyControllers;
     private int sequenceIndex = 0;
 
     void Awake()
     {
-        podControllers = new List<PodController>();
+        keyControllers = new List<KeyController>();
     }
 
     public override void Unlock()
     {
+        sequenceIndex = 0;
         locked = false;
-        var renderer = gameObject.GetComponent<Renderer>();
-        renderer.material.SetColor("_EmissionColor", Color.green);
+        foreach (KeyController keyController in keyControllers)
+        {
+            keyController.Confirm(2);
+        }
         //Reset();
     }
 
     public override void _Lock()
     {
         locked = true;
-        var renderer = gameObject.GetComponent<Renderer>();
-        renderer.material.SetColor("_EmissionColor", Color.red);
     }
 
-    public override void Check(float value, PodController controller)
+    public override void Check(float value, KeyController controller)
     {
         if (value > 0)
         {
             if (value == sequence[sequenceIndex++])
             {
+                keyControllers.Add(controller);
                 if (sequenceIndex == sequence.Length) 
                     Unlock();
                 controller.Confirm(1);
-                podControllers.Add(controller);
                 return;
             }
             else 
             {
                 controller.Confirm(0);
-                if (podControllers.Contains(controller))
-                    podControllers.Remove(controller);
+                if (keyControllers.Contains(controller))
+                    keyControllers.Remove(controller);
                 Reset();
                 _Lock();
                 return;
@@ -55,8 +56,8 @@ public class SequenceLockControllerPods : Lock
         else
         {
             controller.Confirm(-1);
-            if (podControllers.Contains(controller))
-                podControllers.Remove(controller);
+            if (keyControllers.Contains(controller))
+                keyControllers.Remove(controller);
             Reset();
             _Lock();
         }
@@ -67,7 +68,7 @@ public class SequenceLockControllerPods : Lock
     
     }
 
-    public override void Check(float value, KeyController controller)
+    public override void Check(float value, PodController controller)
     {
         
     }
@@ -75,9 +76,9 @@ public class SequenceLockControllerPods : Lock
     private void Reset()
     {
         sequenceIndex = 0;
-        foreach (PodController podController in podControllers)
+        foreach (KeyController keyController in keyControllers)
         {
-            podController.Reset();
+            keyController.Reset();
         }
     }
 }

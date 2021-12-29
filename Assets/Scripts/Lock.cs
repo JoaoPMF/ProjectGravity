@@ -13,4 +13,6 @@ public abstract class Lock : MonoBehaviour
     public abstract void Check(float value);
 
     public abstract void Check(float value, PodController controller);
+
+    public abstract void Check(float value, KeyController controller);
 }

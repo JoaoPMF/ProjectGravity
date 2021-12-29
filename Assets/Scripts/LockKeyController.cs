@@ -29,6 +29,11 @@ public class LockKeyController : Lock
 
     }
 
+    public override void Check(float value, KeyController controller)
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider collider) 
     {
         if (locked)
