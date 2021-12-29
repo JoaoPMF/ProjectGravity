@@ -25,6 +25,10 @@ public class LockKeyController : Lock
         //empty
     }
 
+    public override void Check(float value, PodController controller){
+
+    }
+
     private void OnTriggerEnter(Collider collider) 
     {
         if (locked)

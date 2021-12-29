@@ -71,9 +71,9 @@ public class Pickup : MonoBehaviour
             rb.useGravity = false;
             rb.drag = 10;
 
-            Outline outline = pickUpObj.GetComponent<Outline>();
-            outline.enabled = true;
-            outline.OutlineMode = Outline.Mode.SilhouetteOnly;
+            //Outline outline = pickUpObj.GetComponent<Outline>();
+            //outline.enabled = true;
+            //outline.OutlineMode = Outline.Mode.SilhouetteOnly;
 
             pickUpObj.GetComponent<BoundaryCheck>().lastPosition = pickUpObj.transform.position;
 

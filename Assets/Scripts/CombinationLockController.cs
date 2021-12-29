@@ -55,4 +55,8 @@ public class CombinationLockController : Lock
         if (lightTrigger)
             LightingController.ToggleLights();
     }
+
+    public override void Check(float value, PodController controller){
+
+    }
 }

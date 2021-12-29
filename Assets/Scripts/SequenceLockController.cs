@@ -5,7 +5,7 @@ using UnityEngine;
 public class SequenceLockController : Lock
 {
     [SerializeField] private List<GameObject> buttons;
-    [SerializeField] private float[] sequence = {1,5,9};
+    [SerializeField] private float[] sequence = {};
 
     private List<ButtonController> buttonControllers;
     private int sequenceIndex = 0;
@@ -63,5 +63,9 @@ public class SequenceLockController : Lock
         {
             buttonController.Reset();
         }
+    }
+
+    public override void Check(float value, PodController controller){
+
     }
 }
