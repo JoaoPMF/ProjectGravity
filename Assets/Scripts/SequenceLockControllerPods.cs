@@ -6,9 +6,11 @@ public class SequenceLockControllerPods : Lock
 {
     [SerializeField] private List<GameObject> pods;
     [SerializeField] private float[] sequence;
+    [SerializeField] private Dialogue dialogue;
 
     private List<PodController> podControllers;
     private int sequenceIndex = 0;
+    private bool completed = false;
 
     void Awake()
     {
@@ -20,6 +22,13 @@ public class SequenceLockControllerPods : Lock
         locked = false;
         var renderer = gameObject.GetComponent<Renderer>();
         renderer.material.SetColor("_EmissionColor", Color.green);
+
+        if (!completed)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            FindObjectOfType<ProgressManager>().Progress();
+            completed = true;
+        }
         //Reset();
     }
 

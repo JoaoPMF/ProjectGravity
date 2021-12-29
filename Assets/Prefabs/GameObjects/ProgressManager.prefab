@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hints: 3
-  puzzleCount: 10
+  puzzleCount: 4
   hintObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -55,3 +55,6 @@ MonoBehaviour:
   progressBackground: {fileID: 0}
   hintAnimator: {fileID: 0}
   progressAnimator: {fileID: 0}
+  spaceshipAnimator: {fileID: 0}
+  fadeAnimator: {fileID: 0}
+  playerMovement: {fileID: 0}

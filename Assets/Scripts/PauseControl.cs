@@ -22,10 +22,8 @@ public class PauseControl : MonoBehaviour
         {
             PauseGame();
         }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            FindObjectOfType<ProgressManager>().Progress();
-        }
+        //if (Input.GetKeyDown(KeyCode.P))
+        //    FindObjectOfType<ProgressManager>().Progress();
     }
 
     public void PauseGame ()

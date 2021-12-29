@@ -8,8 +8,10 @@ public class LightingController : MonoBehaviour
     [SerializeField] private GameObject[] fixtures;
     [SerializeField] private GameObject[] side_fixtures;
     [SerializeField] private Lock lockController;
+    [SerializeField] private Dialogue dialogue;
 
     private bool lightsOn = false;
+    private bool completed = false;
 
     public void ToggleLights()
     {
@@ -37,6 +39,12 @@ public class LightingController : MonoBehaviour
             }
 
             lightsOn = true;
+            if (!completed)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                FindObjectOfType<ProgressManager>().Progress();
+                completed = true;
+            }
         }
         else
         {

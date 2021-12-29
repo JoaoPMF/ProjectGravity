@@ -5,6 +5,7 @@ using UnityEngine;
 public class HatchController : MonoBehaviour
 {
     [SerializeField] private GameObject piece;
+    [SerializeField] private GameObject hatch;
     [SerializeField] private GameObject real_piece;
 
     private bool locked = true;
@@ -13,7 +14,7 @@ public class HatchController : MonoBehaviour
 
     private void Awake()
     {
-        hatchAnimator = gameObject.GetComponent<Animator>();
+        hatchAnimator = hatch.GetComponent<Animator>();
         _collider = gameObject.GetComponent<Collider>();
     }
 
@@ -21,7 +22,7 @@ public class HatchController : MonoBehaviour
     {
         locked = false;
         hatchAnimator.Play("open_hatch", 0 , 0.0f);
-        _collider.isTrigger = false;
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider collider) 
@@ -30,9 +31,9 @@ public class HatchController : MonoBehaviour
         {
             if (collider.gameObject == piece)
             {
-                Unlock();
                 Destroy(piece);
                 real_piece.SetActive(true);
+                Unlock();
             }
         }
     }

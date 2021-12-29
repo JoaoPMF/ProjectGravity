@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ProgressManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class ProgressManager : MonoBehaviour
     [SerializeField] private GameObject progressBackground;
     [SerializeField] private Animator hintAnimator;
     [SerializeField] private Animator progressAnimator;
+    [SerializeField] private Animator spaceshipAnimator;
+    [SerializeField] private Animator fadeAnimator;
+    [SerializeField] private PlayerMovement playerMovement;
 
     void Update()
     {
@@ -55,6 +59,25 @@ public class ProgressManager : MonoBehaviour
             rtVal.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, w);
             yield return new WaitForSeconds(0.01f);
         }
+        if(progress==puzzleCount)
+        {
+            spaceshipAnimator.SetBool("finish",true);
+            StartCoroutine(goToMainMenu());
+            StartCoroutine(fadeOut());
+            playerMovement.enabled = false;
+        }
+    }
+
+    IEnumerator fadeOut()
+    {   
+        yield return new WaitForSeconds(10f);
+        fadeAnimator.SetBool("finish",true);
+    }
+
+    IEnumerator goToMainMenu()
+    {   
+        yield return new WaitForSeconds(15f);
+        SceneManager.LoadScene(1);
     }
  
     IEnumerator hideUI(int secs, Animator animator)

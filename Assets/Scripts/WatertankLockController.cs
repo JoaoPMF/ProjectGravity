@@ -5,6 +5,9 @@ using UnityEngine;
 public class WatertankLockController : Lock
 {
     [SerializeField] private WatertankController[] WatertankControllers;
+    [SerializeField] private Dialogue dialogue;
+
+    private bool completed = false;
 
     public override void Unlock()
     {
@@ -13,6 +16,13 @@ public class WatertankLockController : Lock
         Material green = renderer.materials[1];
         green.SetColor("_EmissionColor", Color.green);
         renderer.materials[1] = green;
+
+        if (!completed)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            FindObjectOfType<ProgressManager>().Progress();
+            completed = true;
+        }
     }
 
     public override void _Lock() 

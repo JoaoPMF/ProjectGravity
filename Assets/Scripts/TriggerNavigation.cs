@@ -5,12 +5,14 @@ using UnityEngine;
 public class TriggerNavigation : MonoBehaviour
 {
     [SerializeField] private LeverController LeverController;
+    [SerializeField] private bool useLever = false;
     [SerializeField] private Dialogue dialogue;
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player"))
         {
-            LeverController.StopTimer();
+            if (useLever)
+                LeverController.StopTimer();
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             Destroy(this);
         }

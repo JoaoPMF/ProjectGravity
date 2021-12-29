@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2517025038522624361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.49, z: 0}
+  m_LocalPosition: {x: 0, y: -0.118, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2517025038789911759}
@@ -89,7 +89,7 @@ Transform:
   m_GameObject: {fileID: 2517025038789911752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.65, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.70000005, y: 0.8, z: 0.70000005}
   m_Children:
   - {fileID: 2517025039029684347}
   - {fileID: 2517025039027047333}
@@ -127,15 +127,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientation: {fileID: 2517025038282542117}
-  moveSpeed: 6
+  moveSpeed: 2
   airMultiplier: 0.4
-  walkSpeed: 4
-  sprintSpeed: 8
-  acceleration: 10
-  jumpForce: 20
+  walkSpeed: 2
+  sprintSpeed: 4
+  acceleration: 5
+  jumpForce: 10
   jumpKey: 32
   sprintKey: 304
-  groundDrag: 6
+  groundDrag: 4
   airDrag: 1
   groundCheck: {fileID: 2517025038522624360}
   groundMask:

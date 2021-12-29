@@ -43,10 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37ec6e4eab452742ab1ee8b60241218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - test
-    - test
   pauseMenu: {fileID: 0}
   settingsMenu: {fileID: 0}
   hints: {fileID: 0}

@@ -6,9 +6,11 @@ public class SequenceLockControllerScreen : Lock
 {
     [SerializeField] private List<GameObject> keys;
     [SerializeField] private float[] sequence;
+    [SerializeField] private Dialogue dialogue;
 
     private List<KeyController> keyControllers;
     private int sequenceIndex = 0;
+    private bool completed = false;
 
     void Awake()
     {
@@ -22,6 +24,13 @@ public class SequenceLockControllerScreen : Lock
         foreach (KeyController keyController in keyControllers)
         {
             keyController.Confirm(2);
+        }
+
+        if (!completed)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            FindObjectOfType<ProgressManager>().Progress();
+            completed = true;
         }
         //Reset();
     }
