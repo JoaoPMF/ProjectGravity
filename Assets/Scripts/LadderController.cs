@@ -36,10 +36,10 @@ public class LadderController : MonoBehaviour
             playerController.enabled = true;
             onLadder = !onLadder;
             rb.useGravity = true;
-            if (playerController.isGrounded)
+            /*if (playerController.isGrounded)
                 rb.AddForce(orientation.forward * -10f, ForceMode.Impulse);
             else
-                rb.AddForce(orientation.up * 5f + orientation.forward * 5f, ForceMode.Impulse);
+                rb.AddForce(orientation.up * 20f + orientation.forward * 10f, ForceMode.Impulse);*/
         }
     }
             

@@ -5,7 +5,6 @@ using UnityEngine;
 public class PauseControl : MonoBehaviour
 {
     public static bool gameIsPaused;
-    public Dialogue dialogue;
     
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject settingsMenu;
@@ -22,10 +21,6 @@ public class PauseControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
