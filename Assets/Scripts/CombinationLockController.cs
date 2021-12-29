@@ -6,9 +6,11 @@ public class CombinationLockController : Lock
 {
     [SerializeField] private List<GameObject> buttons;
     [SerializeField] private float combination = 10;
+    [SerializeField] private bool lightTrigger = false;
+    [SerializeField] private LightingController LightingController;
 
     private List<ButtonController> buttonControllers;
-
+    
     void Awake()
     {
         buttonControllers = new List<ButtonController>();
@@ -41,6 +43,8 @@ public class CombinationLockController : Lock
         locked = false;
         var renderer = gameObject.GetComponent<Renderer>();
         renderer.material.SetColor("_EmissionColor", Color.green);
+        if (lightTrigger)
+            LightingController.ToggleLights();
     }
 
     public override void _Lock()
@@ -48,5 +52,7 @@ public class CombinationLockController : Lock
         locked = true;
         var renderer = gameObject.GetComponent<Renderer>();
         renderer.material.SetColor("_EmissionColor", Color.red);
+        if (lightTrigger)
+            LightingController.ToggleLights();
     }
 }
