@@ -12,6 +12,8 @@ public class WatertankController : Lock
     {
         locked = false;
 
+        gameObject.GetComponent<AudioSource>().Play();
+
         if (isHint)
         {
             FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);

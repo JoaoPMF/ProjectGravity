@@ -25,6 +25,7 @@ public class HatchController : MonoBehaviour
         locked = false;
         hatchAnimator.Play("open_hatch", 0 , 0.0f);
         gameObject.SetActive(false);
+        gameObject.GetComponent<AudioSource>().Play();
     }
 
     private void OnTriggerEnter(Collider collider) 

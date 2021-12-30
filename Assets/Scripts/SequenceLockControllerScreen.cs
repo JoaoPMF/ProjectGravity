@@ -55,8 +55,11 @@ public class SequenceLockControllerScreen : Lock
             if (value == sequence[sequenceIndex++])
             {
                 keyControllers.Add(controller);
-                if (sequenceIndex == sequence.Length) 
+                if (sequenceIndex == sequence.Length)
+                {
                     Unlock();
+                    return;
+                }
                 controller.Confirm(1);
                 return;
             }

@@ -9,6 +9,7 @@ public class KeyController : MonoBehaviour, IInteractible
 
     [SerializeField] private float value = 0f;
     [SerializeField] private Lock lockController;
+    [SerializeField] private AudioClip keyError;
 
     private void Awake()
     {
@@ -49,23 +50,26 @@ public class KeyController : MonoBehaviour, IInteractible
 
     public void Confirm(int success)
     {
-        if(success == 1)
+        if (success == 2)
         {
+            keyAnimator.Play("key_success", 0 , 0.0f);
+        }
+        else if(success == 1)
+        {
+            gameObject.GetComponent<AudioSource>().Play();
             keyAnimator.Play("key_down", 0 , 0.0f);
         }
         else if (success == 0)
         {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(keyError);
             keyAnimator.Play("key_error", 0 , 0.0f);
             pressed = false;
         }
         else if (success == -1)
         {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(keyError);
             keyAnimator.Play("key_up", 0 , 0.0f);
             pressed = false;
-        }
-        else if (success == 2)
-        {
-            keyAnimator.Play("key_success", 0 , 0.0f);
         }
     }
 }

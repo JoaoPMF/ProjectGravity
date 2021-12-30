@@ -17,6 +17,8 @@ public class WatertankLockController : Lock
         green.SetColor("_EmissionColor", Color.green);
         renderer.materials[1] = green;
 
+        gameObject.GetComponent<AudioSource>().Play();
+
         if (!completed)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
