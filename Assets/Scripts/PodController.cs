@@ -10,6 +10,8 @@ public class PodController : MonoBehaviour, IInteractible
 
     [SerializeField] private float value = 0f;
     [SerializeField] private GameObject _lock;
+    [SerializeField] private AudioClip podOpen;
+    [SerializeField] private AudioClip podError;
 
     private void Awake()
     {
@@ -53,15 +55,18 @@ public class PodController : MonoBehaviour, IInteractible
     {
         if(success == 1)
         {
+            gameObject.GetComponent<AudioSource>().Play();
             podAnimator.Play("capsule_close", 0 , 0.0f);
         }
         else if (success == 0)
         {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(podError);
             podAnimator.Play("capsule_error", 0 , 0.0f);
             closed = false;
         }
         else if (success == -1)
         {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(podOpen);
             podAnimator.Play("capsule_open", 0 , 0.0f);
             closed = false;
         }

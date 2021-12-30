@@ -54,6 +54,8 @@ public class CombinationLockController : Lock
             FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
             FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
         }
+
+         gameObject.GetComponent<AudioSource>().Play();
     }
 
     public override void _Lock()

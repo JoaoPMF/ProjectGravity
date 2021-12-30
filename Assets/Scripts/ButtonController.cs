@@ -39,6 +39,7 @@ public class ButtonController : MonoBehaviour, IInteractible
 
     public void PlayAnimation()
     {
+        gameObject.GetComponent<AudioSource>().Play();
         if(!pressed)
         {
             buttonAnimator.Play("button_down", 0 , 0.0f);

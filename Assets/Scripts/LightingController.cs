@@ -11,6 +11,7 @@ public class LightingController : MonoBehaviour
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private bool isHint = false;
     [SerializeField] private int hintIndex = -1;
+    [SerializeField] private AudioSource AudioSource;
 
     private bool lightsOn = false;
     private bool completed = false;
@@ -46,6 +47,7 @@ public class LightingController : MonoBehaviour
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 FindObjectOfType<ProgressManager>().Progress();
                 completed = true;
+                AudioSource.enabled = false;
                 
                 if (isHint)
                 {

@@ -15,6 +15,8 @@ public class LockKeyController : Lock
         Material green = renderer.materials[2];
         green.SetColor("_EmissionColor", Color.green);
         renderer.materials[2] = green;
+
+        gameObject.GetComponent<AudioSource>().Play();
         
         if (isHint)
         {

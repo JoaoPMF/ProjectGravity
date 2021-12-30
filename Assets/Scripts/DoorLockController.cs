@@ -40,6 +40,7 @@ public class DoorLockController : MonoBehaviour
 
     public void PlayAnimation()
     {
+        gameObject.GetComponent<AudioSource>().Play();
         if(!doorOpen)
         {
             doorAnimator.Play("door_open", 0 , 0.0f);

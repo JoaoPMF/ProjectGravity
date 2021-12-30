@@ -19,6 +19,7 @@ public class BoxController : MonoBehaviour, IInteractible
 
     public void PlayAnimation()
     {
+        gameObject.GetComponent<AudioSource>().Play();
         if(!open)
         {
             boxAnimator.Play("box_open", 0 , 0.0f);
