@@ -18,6 +18,7 @@ public class LeverController : MonoBehaviour, IInteractible
     public void Interact()
     {
         if (timer <= 0f){
+            gameObject.GetComponent<AudioSource>().Play();
             leverAnimator.Play("lever_down", 0 , 0.0f);
             doorController.PlayAnimation();
             timer = timerDuration;
@@ -37,6 +38,7 @@ public class LeverController : MonoBehaviour, IInteractible
             if (timer <= 0f){
                 doorController.PlayAnimation();
                 leverAnimator.Play("lever_up", 0 , 0.0f);
+                gameObject.GetComponent<AudioSource>().Play();
             }
         }
     }

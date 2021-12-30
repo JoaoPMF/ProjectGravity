@@ -52,6 +52,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
+        gameObject.GetComponent<AudioSource>().Play();
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {

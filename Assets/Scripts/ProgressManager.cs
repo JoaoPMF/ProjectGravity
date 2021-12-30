@@ -21,6 +21,8 @@ public class ProgressManager : MonoBehaviour
     [SerializeField] private Animator spaceshipAnimator;
     [SerializeField] private Animator fadeAnimator;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private AudioClip progressUp;
+    [SerializeField] private AudioClip hint;
 
     private void Awake() {
         hintList = new Dictionary<GameObject,bool>();
@@ -77,6 +79,7 @@ public class ProgressManager : MonoBehaviour
             hintList[nextHint] = false;
             Outline outline = nextHint.GetComponent<Outline>();
             outline.enabled = true;
+            gameObject.GetComponent<AudioSource>().PlayOneShot(hint);
         }
     }
 
@@ -89,6 +92,7 @@ public class ProgressManager : MonoBehaviour
 
     IEnumerator IncreaseProgressBar()
     {
+        gameObject.GetComponent<AudioSource>().PlayOneShot(progressUp);
         RectTransform rtBg = progressBackground.GetComponent<RectTransform>();
         RectTransform rtVal = progressValue.GetComponent<RectTransform>();
         float currentWidth = ((rtBg.sizeDelta.x / puzzleCount ) * (progress));
@@ -100,6 +104,7 @@ public class ProgressManager : MonoBehaviour
         }
         if(progress==puzzleCount)
         {
+            gameObject.GetComponent<AudioSource>().Play();
             spaceshipAnimator.SetBool("finish",true);
             StartCoroutine(goToMainMenu());
             StartCoroutine(fadeOut());

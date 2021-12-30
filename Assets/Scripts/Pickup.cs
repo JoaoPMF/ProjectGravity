@@ -25,7 +25,7 @@ public class Pickup : MonoBehaviour
                 else
                 {
                     RaycastHit hit;
-                    if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+                    if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
                     {
                         IInteractible interactible = hit.transform.gameObject.GetComponent<IInteractible>();
                         if (interactible != null) 

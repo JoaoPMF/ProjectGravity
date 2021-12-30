@@ -15,6 +15,7 @@ public class PauseControl : MonoBehaviour
     [SerializeField] private Animator progressAnimator;
     [SerializeField] private Animator pauseMenuAnimator;
     [SerializeField] private Animator settingsMenuAnimator;
+    [SerializeField] private AudioClip buttonHover;
 
     void Update()
     {
@@ -81,6 +82,16 @@ public class PauseControl : MonoBehaviour
         progressAnimator.SetBool("isVisible", true);
         settingsMenuAnimator.SetBool("isVisible", false);
         StartCoroutine(disableSettingsMenu());
+    }
+
+    public void onClick()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+    }
+
+    public void onHover()
+    {
+        gameObject.GetComponent<AudioSource>().PlayOneShot(buttonHover);
     }
 
     IEnumerator disablePauseMenu()
