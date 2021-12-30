@@ -7,6 +7,8 @@ public class SequenceLockControllerScreen : Lock
     [SerializeField] private List<GameObject> keys;
     [SerializeField] private float[] sequence;
     [SerializeField] private Dialogue dialogue;
+    [SerializeField] private bool isHint = false;
+    [SerializeField] private int hintIndex = -1;
 
     private List<KeyController> keyControllers;
     private int sequenceIndex = 0;
@@ -33,6 +35,12 @@ public class SequenceLockControllerScreen : Lock
             completed = true;
         }
         //Reset();
+
+        if (isHint)
+        {
+            FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
+            FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
+        }
     }
 
     public override void _Lock()

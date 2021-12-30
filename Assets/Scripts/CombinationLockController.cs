@@ -7,6 +7,8 @@ public class CombinationLockController : Lock
     [SerializeField] private List<GameObject> buttons;
     [SerializeField] private float combination = 10;
     [SerializeField] private bool lightTrigger = false;
+    [SerializeField] private bool isHint = false;
+    [SerializeField] private int hintIndex = -1;
     [SerializeField] private LightingController LightingController;
 
     private List<ButtonController> buttonControllers;
@@ -43,8 +45,15 @@ public class CombinationLockController : Lock
         locked = false;
         var renderer = gameObject.GetComponent<Renderer>();
         renderer.material.SetColor("_EmissionColor", Color.green);
+        
         if (lightTrigger)
             LightingController.ToggleLights();
+
+        if (isHint)
+        {
+            FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
+            FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
+        }
     }
 
     public override void _Lock()

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,10 +8,11 @@ using UnityEngine.SceneManagement;
 public class ProgressManager : MonoBehaviour
 {
     private int progress = 0;
+    private Dictionary<GameObject,bool> hintList;
     
     [SerializeField] private int hints = 3;
     [SerializeField] private int puzzleCount = 10;
-    [SerializeField] private GameObject[] hintObjects;
+    [SerializeField] private List<GameObject> hintObjects;
     [SerializeField] private Text hintValue;
     [SerializeField] private GameObject progressValue;
     [SerializeField] private GameObject progressBackground;
@@ -20,24 +22,61 @@ public class ProgressManager : MonoBehaviour
     [SerializeField] private Animator fadeAnimator;
     [SerializeField] private PlayerMovement playerMovement;
 
+    private void Awake() {
+        hintList = new Dictionary<GameObject,bool>();
+
+        foreach(GameObject hintObject in hintObjects)
+        {
+            hintList.Add(hintObject,true);
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H) && !PauseControl.gameIsPaused)
         {
             hintAnimator.SetBool("isVisible", true);
             StartCoroutine(hideUI(5,hintAnimator));
-            StartCoroutine(changeHintValue());
-            HighlightHintObject();
+            if (hints > 0 && hintList.ContainsValue(true))
+            {
+                StartCoroutine(changeHintValue());
+                HighlightHintObject();
+            }
         }
+    }
+
+    GameObject GetNextHint()
+    {
+        foreach(GameObject gameObject in hintList.Keys)
+        {
+            if (hintList[gameObject])
+            {
+                return gameObject;
+            }
+        }
+        return null;
+    }
+
+    public void RemoveHighlightHintObject(int index)
+    {
+        GameObject hintObject = hintList.Keys.ElementAt(index);
+        Outline outline = hintObject.GetComponent<Outline>();
+        outline.enabled = false;
+    }
+
+    public void DisableHint(int index)
+    {
+        hintList[hintList.Keys.ElementAt(index)] = false;
     }
 
     void HighlightHintObject()
     {
-        if (hints > 0 && hintObjects.Length >= progress)
+        GameObject nextHint = GetNextHint();
+        if (nextHint != null)
         {
-            Outline outline = hintObjects[progress].GetComponent<Outline>();
+            hintList[nextHint] = false;
+            Outline outline = nextHint.GetComponent<Outline>();
             outline.enabled = true;
-            outline.OutlineMode = Outline.Mode.OutlineAll;
         }
     }
 

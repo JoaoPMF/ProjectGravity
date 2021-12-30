@@ -5,10 +5,18 @@ using UnityEngine;
 public class WatertankController : Lock
 {
     [SerializeField] private GameObject key;
+    [SerializeField] private bool isHint = false;
+    [SerializeField] private int hintIndex = -1;
 
     public override void Unlock()
     {
         locked = false;
+
+        if (isHint)
+        {
+            FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
+            FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
+        }
     }
 
     public override void _Lock() 

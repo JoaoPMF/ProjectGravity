@@ -7,6 +7,8 @@ public class HatchController : MonoBehaviour
     [SerializeField] private GameObject piece;
     [SerializeField] private GameObject hatch;
     [SerializeField] private GameObject real_piece;
+    [SerializeField] private bool isHint = false;
+    [SerializeField] private int hintIndex = -1;
 
     private bool locked = true;
     private Animator hatchAnimator;
@@ -31,6 +33,11 @@ public class HatchController : MonoBehaviour
         {
             if (collider.gameObject == piece)
             {
+                if (isHint)
+                {
+                    FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
+                    FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
+                }
                 Destroy(piece);
                 real_piece.SetActive(true);
                 Unlock();

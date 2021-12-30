@@ -7,6 +7,8 @@ public class SequenceLockControllerPods : Lock
     [SerializeField] private List<GameObject> pods;
     [SerializeField] private float[] sequence;
     [SerializeField] private Dialogue dialogue;
+    [SerializeField] private bool isHint = false;
+    [SerializeField] private int hintIndex = -1;
 
     private List<PodController> podControllers;
     private int sequenceIndex = 0;
@@ -28,6 +30,12 @@ public class SequenceLockControllerPods : Lock
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             FindObjectOfType<ProgressManager>().Progress();
             completed = true;
+        }
+
+        if (isHint)
+        {
+            FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
+            FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
         }
         //Reset();
     }

@@ -9,6 +9,8 @@ public class LightingController : MonoBehaviour
     [SerializeField] private GameObject[] side_fixtures;
     [SerializeField] private Lock lockController;
     [SerializeField] private Dialogue dialogue;
+    [SerializeField] private bool isHint = false;
+    [SerializeField] private int hintIndex = -1;
 
     private bool lightsOn = false;
     private bool completed = false;
@@ -44,11 +46,16 @@ public class LightingController : MonoBehaviour
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 FindObjectOfType<ProgressManager>().Progress();
                 completed = true;
+                
+                if (isHint)
+                {
+                    FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
+                    FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
+                }
             }
         }
         else
         {
-            Debug.Log("wrong block");
             foreach (GameObject light in lights)
             {
                 light.SetActive(false);

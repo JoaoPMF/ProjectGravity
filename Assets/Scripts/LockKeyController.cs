@@ -5,6 +5,8 @@ using UnityEngine;
 public class LockKeyController : Lock
 {
     [SerializeField] private GameObject key;
+    [SerializeField] private bool isHint = false;
+    [SerializeField] private int hintIndex = -1;
 
     public override void Unlock()
     {
@@ -13,6 +15,12 @@ public class LockKeyController : Lock
         Material green = renderer.materials[2];
         green.SetColor("_EmissionColor", Color.green);
         renderer.materials[2] = green;
+        
+        if (isHint)
+        {
+            FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
+            FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
+        }
     }
 
     public override void _Lock() 
