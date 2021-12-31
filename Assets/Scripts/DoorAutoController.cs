@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DoorAutoController : MonoBehaviour
 {
+
+    public bool isTutorialDoor = false;
+
     private Animator doorAnimator;
     private bool doorOpen = false;
 
@@ -16,7 +19,10 @@ public class DoorAutoController : MonoBehaviour
     {
         if(collider.CompareTag("Player"))
         {
-            PlayAnimation();
+            if (isTutorialDoor)
+                PlayAnimationTutorial();
+            else
+                PlayAnimation();
         }
     }
 
@@ -24,12 +30,31 @@ public class DoorAutoController : MonoBehaviour
     {
         if(collider.CompareTag("Player"))
         {
-            PlayAnimation();
+            if (isTutorialDoor)
+                PlayAnimationTutorial();
+            else
+                PlayAnimation();
+        }
+    }
+
+    public void PlayAnimationTutorial()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+        if(!doorOpen)
+        {
+            doorAnimator.Play("door_open_tut", 0 , 0.0f);
+            doorOpen = true;
+        }
+        else
+        {
+            doorAnimator.Play("door_close_tut", 0 , 0.0f);
+            doorOpen = false;
         }
     }
 
     public void PlayAnimation()
     {
+        gameObject.GetComponent<AudioSource>().Play();
         if(!doorOpen)
         {
             doorAnimator.Play("door_open", 0 , 0.0f);

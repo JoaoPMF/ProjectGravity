@@ -8,7 +8,7 @@ public class SceneCollider : MonoBehaviour
     [SerializeField] private Animator fadeAnimator;
     [SerializeField] private PlayerMovement playerMovement;
     
-    private void OnTriggerEnter(Collider other) {
+    private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player"))
         {
             fadeAnimator.SetBool("start",true);
