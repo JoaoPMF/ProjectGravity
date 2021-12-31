@@ -121,7 +121,7 @@ public class ProgressManager : MonoBehaviour
     IEnumerator goToMainMenu()
     {   
         yield return new WaitForSeconds(15f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
  
     IEnumerator hideUI(int secs, Animator animator)
