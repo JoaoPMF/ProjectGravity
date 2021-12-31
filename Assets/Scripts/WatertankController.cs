@@ -5,14 +5,18 @@ using UnityEngine;
 public class WatertankController : Lock
 {
     [SerializeField] private GameObject key;
+    [SerializeField] private GameObject water;
     [SerializeField] private bool isHint = false;
     [SerializeField] private int hintIndex = -1;
+    [SerializeField] private Dialogue dialogue;
 
     public override void Unlock()
     {
         locked = false;
 
         gameObject.GetComponent<AudioSource>().Play();
+
+        water.GetComponent<Renderer>().material.color = Color.cyan;
 
         if (isHint)
         {
@@ -48,6 +52,10 @@ public class WatertankController : Lock
             {
                 Unlock();
                 Destroy(key);
+            }
+            else if (!collider.gameObject.CompareTag("Player"))
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             }
         }
     }

@@ -23,11 +23,13 @@ public class LeverController : MonoBehaviour, IInteractible
             leverAnimator.Play("lever_locked", 0 , 0.0f);
             gameObject.GetComponent<AudioSource>().PlayOneShot(leverError);
         }
-        if (timer <= 0f){
-            gameObject.GetComponent<AudioSource>().Play();
-            leverAnimator.Play("lever_down", 0 , 0.0f);
-            doorController.PlayAnimation();
-            timer = timerDuration;
+        else{
+            if (timer <= 0f){
+                gameObject.GetComponent<AudioSource>().Play();
+                leverAnimator.Play("lever_down", 0 , 0.0f);
+                doorController.PlayAnimation();
+                timer = timerDuration;
+            }
         }
     }
 
