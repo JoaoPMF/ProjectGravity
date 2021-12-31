@@ -35,6 +35,11 @@ public class ButtonController : MonoBehaviour, IInteractible
         {
             buttonAnimator.Play("button_up", 0 , 0.0f);
             pressed = false;
+            var renderer = gameObject.GetComponent<Renderer>();
+            if (invert_emission)
+                renderer.material.DisableKeyword("_EMISSION");
+            else
+                renderer.material.EnableKeyword("_EMISSION");
         }
     }
 

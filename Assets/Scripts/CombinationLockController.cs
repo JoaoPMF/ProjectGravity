@@ -27,17 +27,20 @@ public class CombinationLockController : Lock
 
     public override void Check(float value)
     {
-        float combinationValue = 0;
-
-        foreach (ButtonController buttonController in buttonControllers)
+        if (!(lightTrigger && !locked))
         {
-            combinationValue += buttonController.GetValue();
-        }
+            float combinationValue = 0;
 
-        if (combinationValue == combination) 
-            Unlock();
-        else
-            _Lock();
+            foreach (ButtonController buttonController in buttonControllers)
+            {
+                combinationValue += buttonController.GetValue();
+            }
+
+            if (combinationValue == combination) 
+                Unlock();
+            else
+                _Lock();
+        }
     }
 
     public override void Unlock()
@@ -46,8 +49,11 @@ public class CombinationLockController : Lock
         var renderer = gameObject.GetComponent<Renderer>();
         renderer.material.SetColor("_EmissionColor", Color.green);
         
-        if (lightTrigger)
+        if (lightTrigger){
             LightingController.ToggleLights();
+            foreach (ButtonController buttonController in buttonControllers)
+                buttonController.Reset();
+        }
 
         if (isHint)
         {

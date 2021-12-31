@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TriggerNavigation : MonoBehaviour
 {
-    [SerializeField] private LeverController LeverController;
+    [SerializeField] private LeverController leverController;
+    [SerializeField] private DoorController doorController;
     [SerializeField] private bool useLever = false;
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private bool isHint = false;
@@ -15,7 +16,9 @@ public class TriggerNavigation : MonoBehaviour
         {
             if (useLever)
             {
-                LeverController.StopTimer();
+                if (!doorController.doorOpen)
+                    doorController.PlayAnimation();
+                leverController.StopTimer();
                 if (isHint)
                 {
                     FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);

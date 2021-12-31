@@ -12,74 +12,77 @@ public class LightingController : MonoBehaviour
     [SerializeField] private bool isHint = false;
     [SerializeField] private int hintIndex = -1;
     [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private GameObject particles;
 
     private bool lightsOn = false;
     private bool completed = false;
 
     public void ToggleLights()
     {
-        if(!lightsOn && !lockController.locked)
+        if (!completed)
         {
-            foreach (GameObject light in lights)
+            if(!lightsOn && !lockController.locked)
             {
-                light.SetActive(true);
-            }
+                foreach (GameObject light in lights)
+                {
+                    light.SetActive(true);
+                }
 
-            foreach (GameObject fixture in fixtures)
-            {
-                Renderer renderer = fixture.GetComponent<Renderer>();
-                Material m = renderer.materials[1];
-                m.EnableKeyword("_EMISSION");
-                renderer.materials[1] = m;
-            }
+                foreach (GameObject fixture in fixtures)
+                {
+                    Renderer renderer = fixture.GetComponent<Renderer>();
+                    Material m = renderer.materials[1];
+                    m.EnableKeyword("_EMISSION");
+                    renderer.materials[1] = m;
+                }
 
-            foreach (GameObject fixture in side_fixtures)
-            {
-                Renderer renderer = fixture.GetComponent<Renderer>();
-                Material m = renderer.materials[0];
-                m.EnableKeyword("_EMISSION");
-                renderer.materials[0] = m;
-            }
+                foreach (GameObject fixture in side_fixtures)
+                {
+                    Renderer renderer = fixture.GetComponent<Renderer>();
+                    Material m = renderer.materials[0];
+                    m.EnableKeyword("_EMISSION");
+                    renderer.materials[0] = m;
+                }
 
-            lightsOn = true;
-            if (!completed)
-            {
+                lightsOn = true;
+
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 FindObjectOfType<ProgressManager>().Progress();
                 completed = true;
                 AudioSource.enabled = false;
+                particles.SetActive(false);
                 
                 if (isHint)
                 {
                     FindObjectOfType<ProgressManager>().RemoveHighlightHintObject(hintIndex);
                     FindObjectOfType<ProgressManager>().DisableHint(hintIndex);
+                } 
+            }
+            else
+            {
+                foreach (GameObject light in lights)
+                {
+                    light.SetActive(false);
                 }
-            }
-        }
-        else
-        {
-            foreach (GameObject light in lights)
-            {
-                light.SetActive(false);
-            }
 
-            foreach (GameObject fixture in fixtures)
-            {
-                Renderer renderer = fixture.GetComponent<Renderer>();
-                Material m = renderer.materials[1];
-                m.DisableKeyword("_EMISSION");
-                renderer.materials[1] = m;
-            }
+                foreach (GameObject fixture in fixtures)
+                {
+                    Renderer renderer = fixture.GetComponent<Renderer>();
+                    Material m = renderer.materials[1];
+                    m.DisableKeyword("_EMISSION");
+                    renderer.materials[1] = m;
+                }
 
-            foreach (GameObject fixture in side_fixtures)
-            {
-                Renderer renderer = fixture.GetComponent<Renderer>();
-                Material m = renderer.materials[0];
-                m.DisableKeyword("_EMISSION");
-                renderer.materials[0] = m;
+                foreach (GameObject fixture in side_fixtures)
+                {
+                    Renderer renderer = fixture.GetComponent<Renderer>();
+                    Material m = renderer.materials[0];
+                    m.DisableKeyword("_EMISSION");
+                    renderer.materials[0] = m;
+                }
+                
+                lightsOn = false;
             }
-            
-            lightsOn = false;
         }
     }
 }

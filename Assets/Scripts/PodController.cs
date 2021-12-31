@@ -10,6 +10,7 @@ public class PodController : MonoBehaviour, IInteractible
 
     [SerializeField] private float value = 0f;
     [SerializeField] private GameObject _lock;
+    [SerializeField] private GameObject _light;
     [SerializeField] private AudioClip podOpen;
     [SerializeField] private AudioClip podError;
 
@@ -21,8 +22,9 @@ public class PodController : MonoBehaviour, IInteractible
 
     public void Interact()
     {
-        PlayAnimation();
-        lockController.Check(GetValue(), this);
+        PlayAnimation(lockController.locked);
+        if(lockController.locked)
+            lockController.Check(GetValue(), this);
     }
 
     public float GetValue()
@@ -34,20 +36,34 @@ public class PodController : MonoBehaviour, IInteractible
     {
         if(closed)
         {
+            StartCoroutine(toogleLight(false));
             podAnimator.Play("capsule_open", 0 , 0.0f);
             closed = false;
         }
     }
 
-    public void PlayAnimation()
+    public void PlayAnimation(bool locked)
     {
         if(!closed)
         {
             closed = true;
+            if(!lockController.locked)
+            {
+                gameObject.GetComponent<AudioSource>().Play();
+                podAnimator.Play("capsule_close", 0 , 0.0f);
+                StartCoroutine(toogleLight(true));
+            }
         }
         else
         {
             closed = false;
+            if(!lockController.locked)
+            {
+                gameObject.GetComponent<AudioSource>().PlayOneShot(podOpen);
+                podAnimator.Play("capsule_open", 0 , 0.0f);
+                closed = false;
+                StartCoroutine(toogleLight(false));
+            }
         }
     }
 
@@ -57,6 +73,7 @@ public class PodController : MonoBehaviour, IInteractible
         {
             gameObject.GetComponent<AudioSource>().Play();
             podAnimator.Play("capsule_close", 0 , 0.0f);
+            StartCoroutine(toogleLight(true));
         }
         else if (success == 0)
         {
@@ -69,7 +86,14 @@ public class PodController : MonoBehaviour, IInteractible
             gameObject.GetComponent<AudioSource>().PlayOneShot(podOpen);
             podAnimator.Play("capsule_open", 0 , 0.0f);
             closed = false;
+            StartCoroutine(toogleLight(false));
         }
+    }
+
+    IEnumerator toogleLight(bool toogle)
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        _light.SetActive(toogle);
     }
 }
 
