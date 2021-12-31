@@ -3331,7 +3331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 65.797, y: 195.403, z: 6.604}
 --- !u!1 &198688527
 GameObject:
@@ -11585,7 +11585,7 @@ Transform:
   - {fileID: 1536894759}
   - {fileID: 883590581}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &665682893
 Animator:
@@ -21289,6 +21289,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163933585}
   m_Mesh: {fileID: 1490014688594724021, guid: 62569b286a0462844a3a33f4df17e317, type: 3}
+--- !u!1001 &1197260500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -33.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.61457
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.18323107
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7313319
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.23212908
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 34.385
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 260.456
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220824, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.202
+      objectReference: {fileID: 0}
+    - target: {fileID: 147734465990220827, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
+      propertyPath: m_Name
+      value: Particle System
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88ada3af27346c4429b5107acb5a6b46, type: 3}
 --- !u!1 &1206059353
 GameObject:
   m_ObjectHideFlags: 0
@@ -65292,6 +65349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorController: {fileID: 2105719612}
   timerDuration: 12
+  leverError: {fileID: 0}
+  waterlock_lever: {fileID: 0}
 --- !u!95 &9014776603890097430
 Animator:
   serializedVersion: 3
