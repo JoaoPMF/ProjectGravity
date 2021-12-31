@@ -6,6 +6,8 @@ public class LeverController : MonoBehaviour, IInteractible
 {
     [SerializeField] private DoorController doorController;
     [SerializeField] private float timerDuration = 10f;
+    [SerializeField] private AudioClip leverError;
+    [SerializeField] private Lock waterlock_lever;
 
     private Animator leverAnimator;
     private float timer = 0f;
@@ -17,6 +19,10 @@ public class LeverController : MonoBehaviour, IInteractible
 
     public void Interact()
     {
+        if (waterlock_lever.locked){
+            leverAnimator.Play("lever_locked", 0 , 0.0f);
+            gameObject.GetComponent<AudioSource>().PlayOneShot(leverError);
+        }
         if (timer <= 0f){
             gameObject.GetComponent<AudioSource>().Play();
             leverAnimator.Play("lever_down", 0 , 0.0f);

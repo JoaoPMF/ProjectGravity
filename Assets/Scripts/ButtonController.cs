@@ -10,6 +10,7 @@ public class ButtonController : MonoBehaviour, IInteractible
 
     [SerializeField] private float value = 0f;
     [SerializeField] private GameObject _lock;
+    [SerializeField] private bool invert_emission = false;
 
     private void Awake()
     {
@@ -45,14 +46,20 @@ public class ButtonController : MonoBehaviour, IInteractible
             buttonAnimator.Play("button_down", 0 , 0.0f);
             pressed = true;
             var renderer = gameObject.GetComponent<Renderer>();
-            renderer.material.DisableKeyword("_EMISSION");
+            if (!invert_emission)
+                renderer.material.DisableKeyword("_EMISSION");
+            else
+                renderer.material.EnableKeyword("_EMISSION");
         }
         else
         {
             buttonAnimator.Play("button_up", 0 , 0.0f);
             pressed = false;
             var renderer = gameObject.GetComponent<Renderer>();
-            renderer.material.EnableKeyword("_EMISSION");
+            if (invert_emission)
+                renderer.material.DisableKeyword("_EMISSION");
+            else
+                renderer.material.EnableKeyword("_EMISSION");
         }
     }
 }
