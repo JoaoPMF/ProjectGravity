@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 1129925}
   - component: {fileID: 1129924}
   - component: {fileID: 1129927}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door_corridor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 76189700}
   - component: {fileID: 76189702}
   - component: {fileID: 76189701}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: hatch_piece_interactible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84232243}
   - component: {fileID: 84232244}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2109,7 +2109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113378335}
   - component: {fileID: 113378336}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2394,7 +2394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 127944097}
   - component: {fileID: 127944098}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2487,7 +2487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 133624959}
   - component: {fileID: 133624960}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4729,7 +4729,7 @@ GameObject:
   - component: {fileID: 241246596}
   - component: {fileID: 241246595}
   - component: {fileID: 241246598}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door_pods
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5132,7 +5132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 248283186}
   - component: {fileID: 248283187}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7031,7 +7031,7 @@ GameObject:
   - component: {fileID: 297658717}
   - component: {fileID: 297658716}
   - component: {fileID: 297658722}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7265,7 +7265,7 @@ GameObject:
   - component: {fileID: 298851732}
   - component: {fileID: 298851731}
   - component: {fileID: 298851733}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: trigger_navigation
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -7588,7 +7588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339977491}
   - component: {fileID: 339977492}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8342,7 +8342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371229807}
   - component: {fileID: 371229808}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9443,7 +9443,7 @@ GameObject:
   - component: {fileID: 400093022}
   - component: {fileID: 400093021}
   - component: {fileID: 400093024}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door_electrical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10378,7 +10378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 440954218}
   - component: {fileID: 440954219}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10471,7 +10471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442592730}
   - component: {fileID: 442592731}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10994,7 +10994,7 @@ GameObject:
   - component: {fileID: 490094904}
   - component: {fileID: 490094906}
   - component: {fileID: 490094905}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: trigger_start
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -11067,7 +11067,7 @@ GameObject:
   - component: {fileID: 494993260}
   - component: {fileID: 494993259}
   - component: {fileID: 494993265}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11354,7 +11354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 509649848}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling_lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13743,7 +13743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572239827}
   - component: {fileID: 572239828}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13841,7 +13841,7 @@ GameObject:
   - component: {fileID: 585498465}
   - component: {fileID: 585498464}
   - component: {fileID: 585498470}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14745,7 +14745,7 @@ GameObject:
   - component: {fileID: 617707242}
   - component: {fileID: 617707241}
   - component: {fileID: 617707240}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door.window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15922,7 +15922,7 @@ GameObject:
   - component: {fileID: 690808692}
   - component: {fileID: 690808694}
   - component: {fileID: 690808693}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: trigger_stairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -15988,7 +15988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694720903}
   - component: {fileID: 694720904}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16081,7 +16081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696116493}
   - component: {fileID: 696116494}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16885,7 +16885,7 @@ GameObject:
   - component: {fileID: 750445903}
   - component: {fileID: 750445902}
   - component: {fileID: 750445901}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.018 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17082,7 +17082,7 @@ GameObject:
   - component: {fileID: 757292080}
   - component: {fileID: 757292079}
   - component: {fileID: 757292085}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17792,7 +17792,7 @@ GameObject:
   - component: {fileID: 779109809}
   - component: {fileID: 779109808}
   - component: {fileID: 779109811}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: keypad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18012,7 +18012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 782788705}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: keypad_lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19129,7 +19129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814675642}
   - component: {fileID: 814675643}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19613,7 +19613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 822327611}
   - component: {fileID: 822327612}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19802,7 +19802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827546660}
   - component: {fileID: 827546661}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19897,7 +19897,7 @@ GameObject:
   - component: {fileID: 831933858}
   - component: {fileID: 831933857}
   - component: {fileID: 831933856}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20670,7 +20670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 860266828}
   - component: {fileID: 860266829}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20763,7 +20763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861585718}
   - component: {fileID: 861585719}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22907,7 +22907,7 @@ GameObject:
   - component: {fileID: 913845187}
   - component: {fileID: 913845186}
   - component: {fileID: 913845192}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23237,7 +23237,7 @@ GameObject:
   - component: {fileID: 918093845}
   - component: {fileID: 918093847}
   - component: {fileID: 918093846}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: trigger_stairs
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -23684,7 +23684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 937587783}
   - component: {fileID: 937587784}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23778,7 +23778,7 @@ GameObject:
   - component: {fileID: 943654325}
   - component: {fileID: 943654327}
   - component: {fileID: 943654326}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: trigger_pods
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -23845,7 +23845,7 @@ GameObject:
   - component: {fileID: 945144036}
   - component: {fileID: 945144035}
   - component: {fileID: 945144034}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door.window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24054,7 +24054,7 @@ GameObject:
   - component: {fileID: 965143782}
   - component: {fileID: 965143781}
   - component: {fileID: 965143786}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24712,7 +24712,7 @@ GameObject:
   - component: {fileID: 985738855}
   - component: {fileID: 985738857}
   - component: {fileID: 985738858}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door_room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24898,7 +24898,7 @@ GameObject:
   - component: {fileID: 986426132}
   - component: {fileID: 986426133}
   - component: {fileID: 986426134}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: cabinet_electrical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25960,7 +25960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1020956170}
   - component: {fileID: 1020956171}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26149,7 +26149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033848101}
   - component: {fileID: 1033848102}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27074,7 +27074,7 @@ GameObject:
   - component: {fileID: 1074340042}
   - component: {fileID: 1074340041}
   - component: {fileID: 1074340040}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door.window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28711,7 +28711,7 @@ GameObject:
   - component: {fileID: 1173903132}
   - component: {fileID: 1173903131}
   - component: {fileID: 1173903130}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.006 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30352,7 +30352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1223717991}
   - component: {fileID: 1223717992}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30509,7 +30509,7 @@ GameObject:
   - component: {fileID: 1281508776}
   - component: {fileID: 1281508775}
   - component: {fileID: 1281508774}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31193,7 +31193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1314206328}
   - component: {fileID: 1314206329}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32740,7 +32740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1406673783}
   - component: {fileID: 1406673784}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32838,7 +32838,7 @@ GameObject:
   - component: {fileID: 1409444143}
   - component: {fileID: 1409444142}
   - component: {fileID: 1409444148}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33071,7 +33071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1418452085}
   - component: {fileID: 1418452086}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33169,7 +33169,7 @@ GameObject:
   - component: {fileID: 1422416786}
   - component: {fileID: 1422416785}
   - component: {fileID: 1422416791}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34430,7 +34430,7 @@ GameObject:
   - component: {fileID: 1462230464}
   - component: {fileID: 1462230463}
   - component: {fileID: 1462230469}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35101,7 +35101,7 @@ GameObject:
   - component: {fileID: 1474243673}
   - component: {fileID: 1474243672}
   - component: {fileID: 1474243671}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.013 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36737,7 +36737,7 @@ GameObject:
   - component: {fileID: 1554589763}
   - component: {fileID: 1554589762}
   - component: {fileID: 1554589767}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: lock_indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37730,7 +37730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1570112837}
   - component: {fileID: 1570112838}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38975,7 +38975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594715991}
   - component: {fileID: 1594715992}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39667,7 +39667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632892925}
   - component: {fileID: 1632892926}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40394,7 +40394,7 @@ GameObject:
   - component: {fileID: 1700619212}
   - component: {fileID: 1700619211}
   - component: {fileID: 1700619210}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41144,7 +41144,7 @@ GameObject:
   - component: {fileID: 1713735791}
   - component: {fileID: 1713735790}
   - component: {fileID: 1713735789}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door.window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41532,7 +41532,7 @@ GameObject:
   - component: {fileID: 1742126325}
   - component: {fileID: 1742126324}
   - component: {fileID: 1742126330}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44525,7 +44525,7 @@ GameObject:
   - component: {fileID: 1910455322}
   - component: {fileID: 1910455321}
   - component: {fileID: 1910455320}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44625,7 +44625,7 @@ GameObject:
   - component: {fileID: 1913216306}
   - component: {fileID: 1913216305}
   - component: {fileID: 1913216311}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: button (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44858,7 +44858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914953699}
   - component: {fileID: 1914953700}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45968,9 +45968,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665682892}
     m_Modifications:
+    - target: {fileID: 2517025038522624360, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 2517025038789911752, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517025038789911757, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
+      propertyPath: groundDistance
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2517025038789911758, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
       propertyPath: cam
@@ -45982,11 +45990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2517025038789911759, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 2517025038789911759, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 2517025038789911759, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46027,6 +46035,10 @@ PrefabInstance:
     - target: {fileID: 2517025038789911759, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517025039029684346, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
+      propertyPath: m_Direction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79eb133aa0dbe0743a3c5546543470b8, type: 3}
@@ -46238,7 +46250,7 @@ GameObject:
   - component: {fileID: 2011535572}
   - component: {fileID: 2011535574}
   - component: {fileID: 2011535573}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: trigger_tanks
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -48181,7 +48193,7 @@ GameObject:
   - component: {fileID: 2105719610}
   - component: {fileID: 2105719612}
   - component: {fileID: 2105719613}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door_navigation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49287,7 +49299,7 @@ GameObject:
   - component: {fileID: 2123412637}
   - component: {fileID: 2123412639}
   - component: {fileID: 2123412638}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: trigger_electrical
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -50734,7 +50746,7 @@ GameObject:
   - component: {fileID: 7304249380951352821}
   - component: {fileID: 1532567770690798822}
   - component: {fileID: 162595411289145037}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51068,7 +51080,7 @@ GameObject:
   - component: {fileID: 8877936455998893334}
   - component: {fileID: 5567628512586762027}
   - component: {fileID: 284931027218454342}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51468,7 +51480,7 @@ GameObject:
   - component: {fileID: 1372752397777695306}
   - component: {fileID: 529236704397142775}
   - component: {fileID: 353692802102756616}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: cabinet.door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51989,7 +52001,7 @@ GameObject:
   - component: {fileID: 5777164574792104637}
   - component: {fileID: 8817332899727588192}
   - component: {fileID: 549390821882622408}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52074,7 +52086,7 @@ GameObject:
   - component: {fileID: 1861250403608778129}
   - component: {fileID: 6097246718417259257}
   - component: {fileID: 592691669245407829}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52712,7 +52724,7 @@ GameObject:
   - component: {fileID: 7151595007174648736}
   - component: {fileID: 3915358252614011347}
   - component: {fileID: 677190302850700710}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53093,7 +53105,7 @@ GameObject:
   - component: {fileID: 5334037118261769367}
   - component: {fileID: 4539702729469192264}
   - component: {fileID: 832149485263162596}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53263,7 +53275,7 @@ GameObject:
   - component: {fileID: 7999218472734871585}
   - component: {fileID: 7526723273252755112}
   - component: {fileID: 879458494355988369}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54252,7 +54264,7 @@ GameObject:
   - component: {fileID: 2442802122519194910}
   - component: {fileID: 1882264246742907661}
   - component: {fileID: 947246311897465250}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54326,7 +54338,7 @@ GameObject:
   - component: {fileID: 7157777371972981578}
   - component: {fileID: 5347810438392944763}
   - component: {fileID: 976106256460645683}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54454,7 +54466,7 @@ GameObject:
   - component: {fileID: 4381139489489628993}
   - component: {fileID: 1426323854782588142}
   - component: {fileID: 1039263554895938424}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54593,7 +54605,7 @@ GameObject:
   - component: {fileID: 2531360282821230345}
   - component: {fileID: 4527529052975733693}
   - component: {fileID: 1071777466520003937}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: navigation.window.main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54648,7 +54660,7 @@ GameObject:
   - component: {fileID: 1078679662583890503}
   - component: {fileID: 7391385296958859660}
   - component: {fileID: 1087898892249566090}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54786,7 +54798,7 @@ GameObject:
   - component: {fileID: 185936648332380396}
   - component: {fileID: 2322329207801653698}
   - component: {fileID: 1139664227896933878}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54968,7 +54980,7 @@ GameObject:
   - component: {fileID: 2272893495964254262}
   - component: {fileID: 4632323173445100981}
   - component: {fileID: 1247390291292756030}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55777,7 +55789,7 @@ GameObject:
   - component: {fileID: 8897240366285514301}
   - component: {fileID: 3129779574562152129}
   - component: {fileID: 1582813068142751462}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55810,7 +55822,7 @@ GameObject:
   - component: {fileID: 1470467123004073005}
   - component: {fileID: 5535022482343444314}
   - component: {fileID: 1606417286057330967}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56206,7 +56218,7 @@ GameObject:
   - component: {fileID: 3740793999044298243}
   - component: {fileID: 8464067935252817385}
   - component: {fileID: 1680794777658746837}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57079,7 +57091,7 @@ GameObject:
   - component: {fileID: 2172460642211041783}
   - component: {fileID: 4975211448181091354}
   - component: {fileID: 2074433374224596394}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57112,7 +57124,7 @@ GameObject:
   - component: {fileID: 8576230458506428070}
   - component: {fileID: 6010762961660212043}
   - component: {fileID: 2075467315624097075}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57145,7 +57157,7 @@ GameObject:
   - component: {fileID: 8482381506233555372}
   - component: {fileID: 8418640413505624057}
   - component: {fileID: 2076850631419171575}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57340,7 +57352,7 @@ GameObject:
   - component: {fileID: 1047381584458139210}
   - component: {fileID: 3199467573258971853}
   - component: {fileID: 2149706556531647015}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57834,7 +57846,7 @@ GameObject:
   - component: {fileID: 1518404983195156811}
   - component: {fileID: 4397877192567134964}
   - component: {fileID: 2363698454892885596}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58042,7 +58054,7 @@ GameObject:
   - component: {fileID: 1216620534352153325}
   - component: {fileID: 6712810688517352022}
   - component: {fileID: 2445428443929668973}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58075,7 +58087,7 @@ GameObject:
   - component: {fileID: 297882015052677165}
   - component: {fileID: 427795633548944669}
   - component: {fileID: 2445791017858862149}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58819,7 +58831,7 @@ GameObject:
   - component: {fileID: 5167343745554776752}
   - component: {fileID: 5719897445151816356}
   - component: {fileID: 2588805443895117697}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59264,7 +59276,7 @@ GameObject:
   - component: {fileID: 8793758408387745794}
   - component: {fileID: 3873179043902260254}
   - component: {fileID: 2706615468120847236}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59430,7 +59442,7 @@ GameObject:
   - component: {fileID: 9205002536698088219}
   - component: {fileID: 606835455956826567}
   - component: {fileID: 2828379244128242813}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: capsule.window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59683,7 +59695,7 @@ GameObject:
   - component: {fileID: 6119052038473728562}
   - component: {fileID: 1313824513612417794}
   - component: {fileID: 2858222966909353501}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60933,7 +60945,7 @@ GameObject:
   - component: {fileID: 7349901869434336229}
   - component: {fileID: 3632194550890127319}
   - component: {fileID: 3176352646226331716}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60974,7 +60986,7 @@ GameObject:
   - component: {fileID: 7515583880610103456}
   - component: {fileID: 4811073403973858566}
   - component: {fileID: 3194144013279707874}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61631,7 +61643,7 @@ GameObject:
   - component: {fileID: 6247195805418977234}
   - component: {fileID: 4838686381738585250}
   - component: {fileID: 3443439492504814484}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door.window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62137,7 +62149,7 @@ GameObject:
   - component: {fileID: 8534264462668846332}
   - component: {fileID: 3057473054350481770}
   - component: {fileID: 3554450411901181978}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63476,7 +63488,7 @@ GameObject:
   - component: {fileID: 8787957204713995476}
   - component: {fileID: 6763172958775300557}
   - component: {fileID: 3997902001568358498}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63968,7 +63980,7 @@ GameObject:
   - component: {fileID: 2306361668222158985}
   - component: {fileID: 4251727659116669277}
   - component: {fileID: 4251727659116669278}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64019,7 +64031,7 @@ GameObject:
   - component: {fileID: 4408458787602813651}
   - component: {fileID: 3049686905320183697}
   - component: {fileID: 4258509456305719028}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64343,7 +64355,7 @@ GameObject:
   - component: {fileID: 4007045793007978425}
   - component: {fileID: 5291709263371080720}
   - component: {fileID: 4347264340497998810}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64595,7 +64607,7 @@ GameObject:
   - component: {fileID: 7493892366955312479}
   - component: {fileID: 6554889505717530064}
   - component: {fileID: 4394823944269943397}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64628,7 +64640,7 @@ GameObject:
   - component: {fileID: 8796792777379277098}
   - component: {fileID: 2064816809770886318}
   - component: {fileID: 4395117987987668876}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64783,7 +64795,7 @@ GameObject:
   - component: {fileID: 7301010419772612542}
   - component: {fileID: 3019691519317604992}
   - component: {fileID: 4465255927838974593}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65209,7 +65221,7 @@ GameObject:
   - component: {fileID: 6620463989522793057}
   - component: {fileID: 9096924245256400858}
   - component: {fileID: 4679375606591102950}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65250,7 +65262,7 @@ GameObject:
   - component: {fileID: 4854413095488281365}
   - component: {fileID: 7275822888134637920}
   - component: {fileID: 4682880442869083986}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65550,7 +65562,7 @@ GameObject:
   - component: {fileID: 5948887153672465622}
   - component: {fileID: 6733209425356878018}
   - component: {fileID: 4771801159548789484}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65840,7 +65852,7 @@ GameObject:
   - component: {fileID: 3580479777165201703}
   - component: {fileID: 8451728240387939457}
   - component: {fileID: 4851081230882303532}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66231,7 +66243,7 @@ GameObject:
   - component: {fileID: 2530588333508427272}
   - component: {fileID: 8125003428999011676}
   - component: {fileID: 4974717910418605106}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67158,7 +67170,7 @@ GameObject:
   - component: {fileID: 5796312574990000297}
   - component: {fileID: 5483650097672059392}
   - component: {fileID: 5241877859849624428}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67654,7 +67666,7 @@ GameObject:
   - component: {fileID: 9156988147025932549}
   - component: {fileID: 6772523028906671901}
   - component: {fileID: 5371030063176363337}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68030,7 +68042,7 @@ GameObject:
   - component: {fileID: 2686393934176385339}
   - component: {fileID: 7715453042342347107}
   - component: {fileID: 5464605277438939483}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68174,7 +68186,7 @@ GameObject:
   - component: {fileID: 2024033360659953497}
   - component: {fileID: 7437918867388113553}
   - component: {fileID: 5502183798723363385}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68842,7 +68854,7 @@ GameObject:
   - component: {fileID: 2189924355563613799}
   - component: {fileID: 819009662335420506}
   - component: {fileID: 5635568647975394393}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69026,7 +69038,7 @@ GameObject:
   - component: {fileID: 2362687985975147154}
   - component: {fileID: 3674154885502417842}
   - component: {fileID: 5679566704374808607}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69531,7 +69543,7 @@ GameObject:
   - component: {fileID: 1540425057934240165}
   - component: {fileID: 4980424649109294343}
   - component: {fileID: 5851197879755710201}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70264,7 +70276,7 @@ GameObject:
   - component: {fileID: 7018836847512970694}
   - component: {fileID: 4107406126512181757}
   - component: {fileID: 6131856185681561172}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70338,7 +70350,7 @@ GameObject:
   - component: {fileID: 3152707666863948284}
   - component: {fileID: 8692269117827768443}
   - component: {fileID: 6163469473678221973}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70531,7 +70543,7 @@ GameObject:
   - component: {fileID: 6730914871114045767}
   - component: {fileID: 2858023527672704634}
   - component: {fileID: 6246984965044907459}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: capsule.window.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71853,7 +71865,7 @@ GameObject:
   - component: {fileID: 7163834111488080202}
   - component: {fileID: 5636464309164607482}
   - component: {fileID: 6680752219158550340}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72253,7 +72265,7 @@ GameObject:
   - component: {fileID: 7989149783617818040}
   - component: {fileID: 6808855517599838961}
   - component: {fileID: 6808855517599838962}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72793,7 +72805,7 @@ GameObject:
   - component: {fileID: 2485844613456443279}
   - component: {fileID: 3143237556866164780}
   - component: {fileID: 6979521098345282198}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73208,7 +73220,7 @@ GameObject:
   - component: {fileID: 1493157527943160794}
   - component: {fileID: 839847336444750706}
   - component: {fileID: 7128329716595407503}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73780,7 +73792,7 @@ GameObject:
   - component: {fileID: 7795518513776883647}
   - component: {fileID: 2841491235222741966}
   - component: {fileID: 7235111645936830200}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73824,7 +73836,7 @@ GameObject:
   - component: {fileID: 7240857301174991618}
   - component: {fileID: 7240857301174991619}
   - component: {fileID: 7240857301174991620}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: hatch_trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74477,7 +74489,7 @@ GameObject:
   - component: {fileID: 9023132832167841772}
   - component: {fileID: 3482729035941249138}
   - component: {fileID: 7400450019375160860}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74745,7 +74757,7 @@ GameObject:
   - component: {fileID: 752015227079151154}
   - component: {fileID: 8064101769624017819}
   - component: {fileID: 7477651797858956159}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75038,7 +75050,7 @@ GameObject:
   - component: {fileID: 7047231876265794846}
   - component: {fileID: 4387668777703898457}
   - component: {fileID: 7611479329471540251}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: navigation.window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75087,7 +75099,7 @@ GameObject:
   - component: {fileID: 8401952775975989189}
   - component: {fileID: 7416691522675291956}
   - component: {fileID: 7623545440020058745}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76542,7 +76554,7 @@ GameObject:
   - component: {fileID: 7181141254863617498}
   - component: {fileID: 9210114042675933702}
   - component: {fileID: 8023160944212080020}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77081,7 +77093,7 @@ GameObject:
   - component: {fileID: 5397234903602113042}
   - component: {fileID: 2547400285723267717}
   - component: {fileID: 8112476797408246911}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.wall.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77385,7 +77397,7 @@ GameObject:
   - component: {fileID: 5404276076545831903}
   - component: {fileID: 6092164469454075012}
   - component: {fileID: 8147954283639276126}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77461,7 +77473,7 @@ GameObject:
   - component: {fileID: 4454137335220074442}
   - component: {fileID: 1983251962275625434}
   - component: {fileID: 8181889743636374647}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77648,7 +77660,7 @@ GameObject:
   - component: {fileID: 4977524287089275976}
   - component: {fileID: 2358740790366806219}
   - component: {fileID: 8254845684337170017}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77956,7 +77968,7 @@ GameObject:
   - component: {fileID: 3010172807918178647}
   - component: {fileID: 8544783547475581258}
   - component: {fileID: 8416272006855688035}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78412,7 +78424,7 @@ GameObject:
   - component: {fileID: 3866217808109778216}
   - component: {fileID: 9207149357125835788}
   - component: {fileID: 8580920108414912304}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78714,7 +78726,7 @@ GameObject:
   - component: {fileID: 3260616447421646087}
   - component: {fileID: 7762067043300318358}
   - component: {fileID: 8707273952004144792}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78788,7 +78800,7 @@ GameObject:
   - component: {fileID: 8754542897800290884}
   - component: {fileID: 9222612021823041958}
   - component: {fileID: 8715528381951340989}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: wall.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78862,7 +78874,7 @@ GameObject:
   - component: {fileID: 4096258085240998142}
   - component: {fileID: 8240236884468358853}
   - component: {fileID: 8724338791216693739}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79029,7 +79041,7 @@ GameObject:
   - component: {fileID: 8845307757646081846}
   - component: {fileID: 7187062814931541680}
   - component: {fileID: 8756928918034714559}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79062,7 +79074,7 @@ GameObject:
   - component: {fileID: 8894691111803617669}
   - component: {fileID: 6745302440407136584}
   - component: {fileID: 8757042446934482404}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80158,7 +80170,7 @@ GameObject:
   - component: {fileID: 7511973939575705574}
   - component: {fileID: 3241440315828803443}
   - component: {fileID: 9164921303175981397}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: doorway.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80262,7 +80274,7 @@ GameObject:
   - component: {fileID: 6973604940704984720}
   - component: {fileID: 6594375322479118825}
   - component: {fileID: 9207749902333219982}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ceiling.light.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80337,7 +80349,7 @@ GameObject:
   - component: {fileID: 4321569238702858101}
   - component: {fileID: 4259814540722873636}
   - component: {fileID: 9211976776456276080}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: room.bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
